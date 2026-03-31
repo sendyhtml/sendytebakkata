@@ -1,0 +1,14 @@
+{
+  "name": "Olahraga",
+  "icon": "⚽",
+  "words": [
+    "Sepak Bola", "Basket", "Voli", "Badminton", "Tenis", "Renang",
+    "Tinju", "Karate", "Judo", "Taekwondo", "Silat", "Gulat",
+    "Lari", "Sprint", "Lompat Jauh", "Lompat Tinggi", "Lempar Cakram",
+    "Tolak Peluru", "Panjat Tebing", "Senam", "Yoga", "Pilates",
+    "Golf", "Baseball", "Softball", "Kriket", "Rugby", "Hoki",
+    "Polo Air", "Selam", "Kayak", "Arung Jeram", "Surfing", "Skateboard",
+    "BMX", "Balap Motor", "Balap Mobil", "Equestrian", "Panahan", "Menembak",
+    "Angkat Besi", "Angkat Berat", "Fitness", "Aerobik", "Zumba"
+  ]
+}
