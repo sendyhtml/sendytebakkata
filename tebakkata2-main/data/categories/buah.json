@@ -1,0 +1,12 @@
+{
+  "name": "Buah",
+  "icon": "🍎",
+  "words": [
+    "Mangga", "Apel", "Jeruk", "Pisang", "Anggur", "Semangka", "Nanas",
+    "Rambutan", "Durian", "Pepaya", "Strawberry", "Melon", "Alpukat",
+    "Jambu", "Manggis", "Salak", "Duku", "Leci", "Sawo", "Belimbing",
+    "Sirsak", "Sukun", "Nangka", "Cempedak", "Markisa", "Passion fruit",
+    "Kiwi", "Pir", "Persik", "Plum", "Ceri", "Blueberry", "Raspberry",
+    "Blackberry", "Lemon", "Jeruk Bali", "Jeruk Nipis", "Kelapa", "Kurma"
+  ]
+}
