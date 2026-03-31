@@ -1,0 +1,14 @@
+{
+  "name": "Makanan",
+  "icon": "🍜",
+  "words": [
+    "Nasi Goreng", "Sate", "Rendang", "Bakso", "Mie Goreng", "Soto",
+    "Pempek", "Gado-gado", "Pecel", "Rawon", "Opor Ayam", "Tongseng",
+    "Ayam Geprek", "Ayam Bakar", "Ikan Bakar", "Nasi Padang", "Nasi Uduk",
+    "Bubur Ayam", "Ketoprak", "Lontong", "Ketupat", "Sop Buntut",
+    "Gulai", "Dendeng", "Abon", "Semur", "Batagor", "Siomay", "Cireng",
+    "Tahu Bulat", "Tempe Goreng", "Pisang Goreng", "Martabak", "Terang Bulan",
+    "Es Teler", "Es Campur", "Cendol", "Klepon", "Onde-onde", "Lemper",
+    "Risol", "Lumpia", "Pastel", "Kroket", "Donat", "Roti Bakar"
+  ]
+}
