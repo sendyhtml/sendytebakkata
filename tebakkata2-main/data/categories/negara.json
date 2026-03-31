@@ -1,0 +1,16 @@
+{
+  "name": "Negara",
+  "icon": "🌍",
+  "words": [
+    "Indonesia", "Malaysia", "Singapura", "Thailand", "Vietnam", "Filipina",
+    "Brunei", "Myanmar", "Kamboja", "Laos", "Timor Leste",
+    "Amerika Serikat", "Kanada", "Meksiko", "Brasil", "Argentina", "Kolombia",
+    "Inggris", "Prancis", "Jerman", "Italia", "Spanyol", "Belanda",
+    "Belgia", "Swiss", "Austria", "Swedia", "Norwegia", "Denmark", "Finlandia",
+    "Rusia", "Ukraina", "Polandia", "Ceko", "Hungaria", "Rumania",
+    "China", "Jepang", "Korea Selatan", "India", "Pakistan", "Bangladesh",
+    "Arab Saudi", "Uni Emirat Arab", "Turki", "Iran", "Irak", "Israel",
+    "Mesir", "Afrika Selatan", "Nigeria", "Kenya", "Ethiopia",
+    "Australia", "Selandia Baru"
+  ]
+}
