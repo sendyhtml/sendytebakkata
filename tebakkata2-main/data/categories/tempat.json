@@ -1,0 +1,13 @@
+{
+  "name": "Tempat",
+  "icon": "🏛️",
+  "words": [
+    "Pantai", "Gunung", "Mall", "Sekolah", "Rumah Sakit", "Bandara", "Stasiun",
+    "Pasar", "Restoran", "Hotel", "Museum", "Perpustakaan", "Kantor", "Pabrik",
+    "Kebun binatang", "Taman", "Lapangan", "Stadion", "Bioskop", "Cafe",
+    "Warung", "Apotek", "Bank", "Masjid", "Gereja", "Pura", "Vihara",
+    "Pelabuhan", "Terminal", "Penjara", "Pemadam kebakaran", "Kantor polisi",
+    "Balai kota", "Universitas", "Kos-kosan", "Apartemen", "Villa",
+    "Kolam renang", "Gym", "Salon", "Barbershop", "Minimarket", "Supermarket"
+  ]
+}
