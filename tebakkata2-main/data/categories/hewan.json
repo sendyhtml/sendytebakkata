@@ -1,0 +1,12 @@
+{
+  "name": "Hewan",
+  "icon": "🐾",
+  "words": [
+    "Sapi", "Kucing", "Anjing", "Harimau", "Singa", "Gajah", "Kuda", "Kelinci",
+    "Ayam", "Bebek", "Ular", "Buaya", "Monyet", "Burung", "Ikan", "Kambing",
+    "Kerbau", "Macan", "Beruang", "Panda", "Zebra", "Jerapah", "Kanguru",
+    "Koala", "Lumba-lumba", "Paus", "Hiu", "Gurita", "Kepiting", "Udang",
+    "Kura-kura", "Iguana", "Hamster", "Tikus", "Marmut", "Landak", "Musang",
+    "Rubah", "Serigala", "Rusa", "Babi", "Domba", "Lele", "Mas koki", "Koi"
+  ]
+}
