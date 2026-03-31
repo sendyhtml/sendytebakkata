@@ -1,0 +1,13 @@
+{
+  "name": "Profesi",
+  "icon": "💼",
+  "words": [
+    "Dokter", "Guru", "Polisi", "Pilot", "Chef", "Petani", "Programmer",
+    "Insinyur", "Arsitek", "Fotografer", "Penulis", "Penyanyi", "Aktor",
+    "Atlet", "Perawat", "Apoteker", "Hakim", "Pengacara", "Akuntan",
+    "Psikolog", "Ilmuwan", "Astronot", "Tentara", "Nelayan", "Peternak",
+    "Tukang kayu", "Montir", "Sopir", "Pelukis", "Musisi", "Direktur",
+    "Manajer", "Marketing", "Designer", "Youtuber", "Influencer", "Streamer",
+    "Barista", "Bartender", "Koki", "Penjahit", "Tukang cukur", "Dokter hewan"
+  ]
+}
