@@ -1,0 +1,13 @@
+{
+  "name": "Benda",
+  "icon": "📦",
+  "words": [
+    "Kursi", "Meja", "Lampu", "Tas", "Sepatu", "Topi", "Payung", "Kunci",
+    "Buku", "Pensil", "Telepon", "Laptop", "Kamera", "Jam tangan", "Kacamata",
+    "Sisir", "Cermin", "Sikat gigi", "Sabun", "Handuk", "Bantal", "Selimut",
+    "Kipas angin", "Kulkas", "Mesin cuci", "Setrika", "Panci", "Wajan",
+    "Sendok", "Garpu", "Pisau", "Gelas", "Piring", "Mangkuk", "Botol",
+    "Ember", "Sapu", "Pel", "Kompor", "Oven", "Microwave", "Blender",
+    "Dispenser", "AC", "TV", "Radio", "Kalkulator", "Gunting", "Lem"
+  ]
+}
