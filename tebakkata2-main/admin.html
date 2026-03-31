@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — TebakKata</title>
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-body">
+<div class="bg-noise"></div>
+<div class="bg-grid"></div>
+
+<div class="admin-layout">
+
+  <!-- ============= SIDEBAR ============= -->
+  <aside class="admin-sidebar">
+    <div class="sb-logo">
+      <svg viewBox="0 0 40 40" fill="none"><rect x="2" y="2" width="36" height="36" rx="10" fill="url(#sbg)"/><text x="20" y="27" text-anchor="middle" font-size="18" font-weight="900" fill="#fff" font-family="Georgia,serif">TK</text><defs><linearGradient id="sbg" x1="2" y1="2" x2="38" y2="38"><stop stop-color="#c9a84c"/><stop offset="1" stop-color="#7a4a10"/></linearGradient></defs></svg>
+      <div>
+        <div class="sb-brand">TebakKata</div>
+        <div class="sb-role">Admin Panel</div>
+      </div>
+    </div>
+
+    <nav class="sb-nav">
+      <a class="nav-item active" data-section="overview">
+        <svg viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="1" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="1" y="11" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="11" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+        Overview
+      </a>
+      <a class="nav-item" data-section="templates">
+        <svg viewBox="0 0 18 18" fill="none"><path d="M3 5h12M3 9h8M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Template Kata
+      </a>
+      <a class="nav-item" data-section="sounds">
+        <svg viewBox="0 0 18 18" fill="none"><path d="M4 7H2a1 1 0 00-1 1v2a1 1 0 001 1h2l3.5 2.5V4.5L4 7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 6a4 4 0 010 6M12 8a2 2 0 010 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Pengaturan Suara
+      </a>
+      <a class="nav-item" data-section="rooms">
+        <svg viewBox="0 0 18 18" fill="none"><rect x="2" y="7" width="14" height="9" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 7V5a3 3 0 016 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Room Aktif
+      </a>
+      <a class="nav-item" data-section="game-settings">
+        <svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M9 1v2M9 15v2M1 9h2M15 9h2M3.22 3.22l1.42 1.42M13.36 13.36l1.42 1.42M3.22 14.78l1.42-1.42M13.36 4.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Pengaturan Game
+      </a>
+    </nav>
+
+    <a href="index.html" class="sb-back">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M8 3L3 8l5 5M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      Kembali ke Game
+    </a>
+  </aside>
+
+  <!-- ============= MAIN ============= -->
+  <main class="admin-main">
+
+    <!-- OVERVIEW -->
+    <section id="section-overview" class="admin-section active">
+      <div class="sec-header">
+        <h1 class="sec-title">Overview</h1>
+        <p class="sec-sub">Statistik sistem secara realtime</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM4 18a6 6 0 0112 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div><div class="stat-val" id="stat-players">0</div><div class="stat-lbl">Pemain Online</div></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M7 10h6M10 7v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div><div class="stat-val" id="stat-rooms">0</div><div class="stat-lbl">Room Aktif</div></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M5 5h10M5 9h7M5 13h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div><div class="stat-val" id="stat-words">0</div><div class="stat-lbl">Total Kata</div></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="7" height="7" rx="2" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="2" width="7" height="7" rx="2" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="11" width="7" height="7" rx="2" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="11" width="7" height="7" rx="2" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div><div class="stat-val" id="stat-categories">0</div><div class="stat-lbl">Kategori</div></div>
+        </div>
+      </div>
+
+      <div class="acard">
+        <h3 class="acard-title">Room Aktif</h3>
+        <div id="overview-rooms"><div class="empty-state">Tidak ada room aktif</div></div>
+      </div>
+    </section>
+
+    <!-- TEMPLATES -->
+    <section id="section-templates" class="admin-section">
+      <div class="sec-header">
+        <h1 class="sec-title">Template Kata</h1>
+        <p class="sec-sub">Kelola kata per kategori. Perubahan langsung tersimpan ke Firebase.</p>
+      </div>
+
+      <div class="acard" style="margin-bottom:20px">
+        <h3 class="acard-title">Tambah Kategori Baru</h3>
+        <div class="input-row">
+          <input id="new-category" class="field-input" type="text" placeholder="Nama kategori baru..." maxlength="40" />
+          <button id="btn-add-category" class="btn btn-primary btn-sm">
+            <svg viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Tambah
+          </button>
+        </div>
+      </div>
+
+      <div id="categories-list" class="categories-list"></div>
+    </section>
+
+    <!-- SOUNDS -->
+    <section id="section-sounds" class="admin-section">
+      <div class="sec-header">
+        <h1 class="sec-title">Pengaturan Suara</h1>
+        <p class="sec-sub">Upload MP3 atau gunakan nada default untuk tombol jawaban</p>
+      </div>
+
+      <div class="sounds-grid">
+        <!-- YES -->
+        <div class="acard sound-card">
+          <div class="sound-header">
+            <div class="sound-badge yes-badge">
+              <svg viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3 class="sound-title">Tombol "Iya"</h3>
+              <p class="sound-sub">Diputar saat host menjawab Iya</p>
+            </div>
+          </div>
+          <div id="preview-yes" class="sound-preview">
+            <span class="no-sound-text">Menggunakan nada default</span>
+          </div>
+          <div class="sound-actions">
+            <button id="btn-test-yes" class="btn btn-outline btn-sm">
+              <svg viewBox="0 0 14 14" fill="none"><path d="M3 2l9 5-9 5V2z" fill="currentColor"/></svg>
+              Test
+            </button>
+            <label class="btn btn-outline btn-sm upload-label">
+              <svg viewBox="0 0 14 14" fill="none"><path d="M7 2v8M4 5l3-3 3 3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Upload MP3
+              <input type="file" id="upload-yes" accept="audio/*" hidden />
+            </label>
+            <button id="btn-reset-yes" class="btn btn-ghost btn-sm btn-danger">Reset</button>
+          </div>
+        </div>
+
+        <!-- MAYBE -->
+        <div class="acard sound-card">
+          <div class="sound-header">
+            <div class="sound-badge maybe-badge">
+              <svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="2"/><path d="M9 5v4l2.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h3 class="sound-title">Tombol "Bisa Jadi"</h3>
+              <p class="sound-sub">Diputar saat host menjawab Bisa Jadi</p>
+            </div>
+          </div>
+          <div id="preview-maybe" class="sound-preview">
+            <span class="no-sound-text">Menggunakan nada default</span>
+          </div>
+          <div class="sound-actions">
+            <button id="btn-test-maybe" class="btn btn-outline btn-sm">
+              <svg viewBox="0 0 14 14" fill="none"><path d="M3 2l9 5-9 5V2z" fill="currentColor"/></svg>
+              Test
+            </button>
+            <label class="btn btn-outline btn-sm upload-label">
+              <svg viewBox="0 0 14 14" fill="none"><path d="M7 2v8M4 5l3-3 3 3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Upload MP3
+              <input type="file" id="upload-maybe" accept="audio/*" hidden />
+            </label>
+            <button id="btn-reset-maybe" class="btn btn-ghost btn-sm btn-danger">Reset</button>
+          </div>
+        </div>
+
+        <!-- NO -->
+        <div class="acard sound-card">
+          <div class="sound-header">
+            <div class="sound-badge no-badge">
+              <svg viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8M13 5L5 13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h3 class="sound-title">Tombol "Tidak"</h3>
+              <p class="sound-sub">Diputar saat host menjawab Tidak</p>
+            </div>
+          </div>
+          <div id="preview-no" class="sound-preview">
+            <span class="no-sound-text">Menggunakan nada default</span>
+          </div>
+          <div class="sound-actions">
+            <button id="btn-test-no" class="btn btn-outline btn-sm">
+              <svg viewBox="0 0 14 14" fill="none"><path d="M3 2l9 5-9 5V2z" fill="currentColor"/></svg>
+              Test
+            </button>
+            <label class="btn btn-outline btn-sm upload-label">
+              <svg viewBox="0 0 14 14" fill="none"><path d="M7 2v8M4 5l3-3 3 3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Upload MP3
+              <input type="file" id="upload-no" accept="audio/*" hidden />
+            </label>
+            <button id="btn-reset-no" class="btn btn-ghost btn-sm btn-danger">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Volume -->
+      <div class="acard" style="margin-top:20px">
+        <h3 class="acard-title">Volume Global</h3>
+        <div class="vol-row">
+          <svg viewBox="0 0 18 18" fill="none"><path d="M4 7H2a1 1 0 00-1 1v2a1 1 0 001 1h2l3.5 2.5V4.5L4 7z" stroke="currentColor" stroke-width="1.5"/><path d="M14 6a4 4 0 010 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <input type="range" id="global-volume" min="0" max="100" value="80" class="vol-slider" />
+          <span id="volume-display" class="vol-display">80%</span>
+        </div>
+        <p class="setting-desc" style="margin-top:8px">Mengatur volume untuk semua suara tombol jawaban</p>
+      </div>
+    </section>
+
+    <!-- ROOMS -->
+    <section id="section-rooms" class="admin-section">
+      <div class="sec-header">
+        <h1 class="sec-title">Room Aktif</h1>
+        <p class="sec-sub">Monitor dan kelola semua room yang sedang berjalan secara realtime</p>
+      </div>
+      <div id="admin-rooms-list">
+        <div class="empty-state">Memuat...</div>
+      </div>
+    </section>
+
+    <!-- GAME SETTINGS -->
+    <section id="section-game-settings" class="admin-section">
+      <div class="sec-header">
+        <h1 class="sec-title">Pengaturan Game</h1>
+        <p class="sec-sub">Konfigurasi aturan global untuk semua room baru</p>
+      </div>
+
+      <div class="acard">
+        <h3 class="acard-title">Aturan Game</h3>
+        <div class="settings-list">
+          <div class="setting-row">
+            <div class="setting-info">
+              <label class="setting-label">Maksimal Pemain per Room</label>
+              <p class="setting-desc">Batas jumlah pemain yang bisa bergabung</p>
+            </div>
+            <input type="number" id="setting-max-players" class="field-input setting-input" min="2" max="20" value="8" />
+          </div>
+          <div class="setting-row">
+            <div class="setting-info">
+              <label class="setting-label">Total Ronde per Game</label>
+              <p class="setting-desc">Berapa ronde sebelum game selesai</p>
+            </div>
+            <input type="number" id="setting-rounds" class="field-input setting-input" min="1" max="30" value="5" />
+          </div>
+          <div class="setting-row">
+            <div class="setting-info">
+              <label class="setting-label">Batas Waktu per Ronde (detik)</label>
+              <p class="setting-desc">0 = tanpa batas waktu</p>
+            </div>
+            <input type="number" id="setting-round-time" class="field-input setting-input" min="0" max="600" value="120" />
+          </div>
+          <div class="setting-row">
+            <div class="setting-info">
+              <label class="setting-label">Poin per Tebakan Benar</label>
+              <p class="setting-desc">Berapa poin diberikan saat berhasil menebak</p>
+            </div>
+            <input type="number" id="setting-points" class="field-input setting-input" min="1" max="999" value="10" />
+          </div>
+          <div class="setting-row">
+            <div class="setting-info">
+              <label class="setting-label">Izinkan Spectator</label>
+              <p class="setting-desc">Pemain yang bergabung saat game berlangsung masuk sebagai penonton</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="setting-spectator" checked />
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            </label>
+          </div>
+          <div class="setting-row">
+            <div class="setting-info">
+              <label class="setting-label">Wajib Isi Petunjuk</label>
+              <p class="setting-desc">Host wajib mengisi petunjuk sebelum game bisa dimulai</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="setting-require-clue" />
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            </label>
+          </div>
+          <div class="setting-row">
+            <div class="setting-info">
+              <label class="setting-label">Judul Aplikasi</label>
+              <p class="setting-desc">Nama yang tampil di tab browser dan lobby</p>
+            </div>
+            <input type="text" id="setting-app-title" class="field-input setting-input" value="TebakKata" maxlength="30" />
+          </div>
+        </div>
+
+        <button id="btn-save-settings" class="btn btn-primary" style="margin-top:24px">
+          <svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Simpan Pengaturan
+        </button>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script type="module" src="js/admin.js"></script>
+</body>
+</html>
